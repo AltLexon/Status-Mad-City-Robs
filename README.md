@@ -9,7 +9,6 @@ local Club = Instance.new("TextLabel")
 local Casino = Instance.new("TextLabel")
 local Bank = Instance.new("TextLabel")
 local Pyramid = Instance.new("TextLabel")
-local TextButton = Instance.new("TextButton")
 local UICorner_2 = Instance.new("UICorner")
 
 --Properties:
@@ -109,18 +108,6 @@ Pyramid.TextScaled = true
 Pyramid.TextSize = 14.000
 Pyramid.TextWrapped = true
 
-TextButton.Parent = Frame
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-TextButton.BackgroundTransparency = 0.500
-TextButton.Position = UDim2.new(0.905555546, 0, -0.0760456249, 0)
-TextButton.Size = UDim2.new(0, 26, 0, 30)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "X"
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextScaled = true
-TextButton.TextSize = 14.000
-TextButton.TextWrapped = true
-
 UICorner_2.Parent = TextButton
 
 
@@ -130,9 +117,6 @@ local function KCYZSR_fake_script() -- ScreenGui.Script
 	local script = Instance.new('Script', ScreenGui)
 
 local sc = game.CoreGui.ScreenGui
-	sc.Frame.TextButton.MouseButton1Click:Connect(function()
-		sc.Enabled = false 
-	end)
 	
 	if (game:GetService("ReplicatedStorage").HeistStatus.Jewel.Locked.Value == true) then
 		game.CoreGui.ScreenGui.Frame.Jewel.Text = "Jewel: Closed"
